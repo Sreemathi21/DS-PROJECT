@@ -1,0 +1,7 @@
+Filename,Entity_Covered,Total_Rows,Columns_Count,Date_Start,Date_End,Unique_Dates,Total_Waste_Tonnes,Missing_Values,Duplicates
+boralasgamuwa_2012-2018.csv,Boralesgamuwa UC,2988,4,2012-01-01,2018-12-31,2417,66213.6,0,0
+dehiwala_2012-2018.csv,Dehiwala MC,3583,4,2012-01-01,2018-12-31,2125,301839.5,0,0
+homagama_2012-2018.csv,Homagama PS,2729,4,2012-01-02,2018-12-31,2054,68506.5,0,0
+moratuwa_2014-2018.csv,Moratuwa MC,6691,4,2014-01-12,2018-12-11,1376,119863.6,0,0
+open_source_austin_daily_waste_2003_jan_2021_jul.csv,Open Benchmark,5591,2,2003-01-13,2021-07-09,5591,7864331.8,0,0
+open_source_ballarat_daily_waste_2000_jul_2015_mar.csv,Open Benchmark,3891,2,2000-07-03,2015-03-27,3886,268284.0,0,0

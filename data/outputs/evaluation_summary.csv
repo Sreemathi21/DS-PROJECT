@@ -1,0 +1,18 @@
+Model,Feature Configuration,Features_Count,Val_MAE_kg,Test_MAE_kg,Test_RMSE_kg,Test_R2
+Persistence Baseline,Lag-1 Baseline,1,25701.97,22811.14,36656.68,0.561
+Linear Regression,Exp 1 (Basic),14,20500.15,17472.98,27554.7,0.7519
+Random Forest,Exp 1 (Basic),14,20423.23,18587.56,32007.21,0.6653
+Gradient Boosting,Exp 1 (Basic),14,20859.99,18216.08,31418.01,0.6775
+XGBoost,Exp 1 (Basic),14,20647.05,18736.49,32585.86,0.6531
+Linear Regression,Exp 2 (Conventional TS),37,20568.99,16910.71,26693.76,0.7672
+Random Forest,Exp 2 (Conventional TS),37,19156.84,15701.76,25845.93,0.7817
+Gradient Boosting,Exp 2 (Conventional TS),37,18596.17,15595.03,25714.18,0.784
+XGBoost,Exp 2 (Conventional TS),37,18629.66,15801.47,25869.29,0.7813
+Linear Regression,Exp 3 (Advanced Stats),49,20373.91,16787.21,26581.48,0.7691
+Random Forest,Exp 3 (Advanced Stats),49,19405.97,15682.73,25836.98,0.7819
+Gradient Boosting,Exp 3 (Advanced Stats),49,18861.17,15645.54,25648.14,0.7851
+XGBoost,Exp 3 (Advanced Stats),49,18779.23,15736.33,25689.68,0.7844
+Linear Regression,Exp 4 (Wave-Aware),58,20404.42,16847.99,26650.18,0.7679
+Random Forest,Exp 4 (Wave-Aware),58,19319.59,15613.36,25692.63,0.7843
+Gradient Boosting,Exp 4 (Wave-Aware),58,18821.89,15559.38,25708.48,0.7841
+XGBoost,Exp 4 (Wave-Aware),58,18560.93,15700.46,25636.45,0.7853

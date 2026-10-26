@@ -1,0 +1,5 @@
+Municipality,Test_Records,Mean_Actual_kg,MAE_kg,RMSE_kg,R2_Score
+Boralesgamuwa UC,358,27539.94,6277.16,8099.77,0.1759
+Dehiwala MC,315,142352.1,28618.7,42422.52,0.106
+Homagama PS,305,34783.31,10691.93,13852.6,0.0106
+Moratuwa MC,203,92154.88,19798.45,25039.38,-0.0422

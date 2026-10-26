@@ -1,0 +1,66 @@
+{
+    "dataset_name": "Kaggle Daily Solid Waste Dataset (Municipal Councils)",
+    "source_files": [
+        "boralasgamuwa_2012-2018.csv",
+        "dehiwala_2012-2018.csv",
+        "homagama_2012-2018.csv",
+        "moratuwa_2014-2018.csv"
+    ],
+    "initial_raw_rows": 15991,
+    "cleaned_ticket_rows": 15977,
+    "zero_weight_tickets_removed": 14,
+    "negative_weights_found": 0,
+    "invalid_dates_found": 0,
+    "exact_duplicates_found": 0,
+    "aggregated_daily_rows": 7966,
+    "municipalities": [
+        "Boralesgamuwa UC",
+        "Dehiwala MC",
+        "Homagama PS",
+        "Moratuwa MC"
+    ],
+    "municipality_summary": {
+        "Boralesgamuwa UC": {
+            "daily_records_count": 2412,
+            "date_start": "2012-01-01",
+            "date_end": "2018-12-31",
+            "mean_daily_kg": 27451.73,
+            "median_daily_kg": 28220.0,
+            "std_daily_kg": 10657.69,
+            "min_daily_kg": 390.0,
+            "max_daily_kg": 215040.0
+        },
+        "Dehiwala MC": {
+            "daily_records_count": 2125,
+            "date_start": "2012-01-01",
+            "date_end": "2018-12-31",
+            "mean_daily_kg": 142042.14,
+            "median_daily_kg": 149890.0,
+            "std_daily_kg": 43798.97,
+            "min_daily_kg": 1440.0,
+            "max_daily_kg": 432630.0
+        },
+        "Homagama PS": {
+            "daily_records_count": 2054,
+            "date_start": "2012-01-02",
+            "date_end": "2018-12-31",
+            "mean_daily_kg": 33352.75,
+            "median_daily_kg": 32590.0,
+            "std_daily_kg": 14983.38,
+            "min_daily_kg": 1840.0,
+            "max_daily_kg": 161460.0
+        },
+        "Moratuwa MC": {
+            "daily_records_count": 1375,
+            "date_start": "2014-01-12",
+            "date_end": "2018-12-11",
+            "mean_daily_kg": 87173.51,
+            "median_daily_kg": 84170.0,
+            "std_daily_kg": 34775.01,
+            "min_daily_kg": 140.0,
+            "max_daily_kg": 515440.0
+        }
+    },
+    "total_waste_recorded_kg": 556423230.0,
+    "total_waste_metric_tonnes": 556423.23
+}

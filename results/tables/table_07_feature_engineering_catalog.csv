@@ -1,0 +1,28 @@
+Feature Name,Category,Definition,Calculation Method,Prediction Availability
+target_next_day_waste_kg,Target Variable,Total waste generated at day t+1 in kg,Y(t+1),Ground Truth Target
+lag_1,Exp 1: Basic,Observed waste generation at current day t,Y(t),Available at time t
+day_of_week,Exp 1: Basic,"Day of week index (0=Mon, 6=Sun)",ticket_date.dt.dayofweek,Known calendar
+is_weekend,Exp 1: Basic,Binary flag for Saturday or Sunday,"day_of_week in [5,6]",Known calendar
+month,Exp 1: Basic,Month of year (1-12),ticket_date.dt.month,Known calendar
+quarter,Exp 1: Basic,Fiscal/calendar quarter (1-4),ticket_date.dt.quarter,Known calendar
+"lag_2, lag_3, lag_7, lag_14, lag_30",Exp 2: Conventional TS,"Historical waste generation at days t-1, t-2, t-6, t-13, t-29",Y.shift(k),Historical only
+diff_lag1_lag2,Exp 2: Conventional TS,Day-to-day rate of change in waste generation,lag_1 - lag_2,Available at t
+diff_lag1_lag7,Exp 2: Conventional TS,Week-over-week difference for same weekday,lag_1 - lag_7,Available at t
+"rolling_mean_3, 7, 14, 30",Exp 2: Conventional TS,Short to long rolling averages over historical windows,Rolling mean over window w,Available at t
+"rolling_std_7, 14",Exp 2: Conventional TS,Rolling volatility of waste generation,Rolling std over window w,Available at t
+"sin_dow, cos_dow",Exp 2: Conventional TS,Cyclical sine & cosine encoding of day of week,sin/cos(2*pi*dow/7),Deterministic
+"sin_month, cos_month",Exp 2: Conventional TS,Cyclical sine & cosine encoding of month,sin/cos(2*pi*month/12),Deterministic
+"rolling_cv_7, 14",Exp 3: Advanced Statistical,Coefficient of Variation (relative volatility),rolling_std / rolling_mean,Available at t
+rolling_range_7,Exp 3: Advanced Statistical,Spread between peak and trough within 7 days,rolling_max_7 - rolling_min_7,Available at t
+rolling_mad_7,Exp 3: Advanced Statistical,Median Absolute Deviation (robust dispersion),median(|Y - med|),Available at t
+"ema_7, ema_14, ema_30",Exp 3: Advanced Statistical,Exponentially weighted moving averages,Y.ewm(span=s).mean(),Available at t
+trend_ema_diff,Exp 3: Advanced Statistical,Short vs medium EMA convergence momentum,ema_7 - ema_14,Available at t
+trend_slope_7,Exp 3: Advanced Statistical,Local linear trend slope over past 7 days,(lag_1 - lag_7) / 7.0,Available at t
+wave_dev_t,Exp 4: Wave-Aware,Current deviation from 14-day baseline at day t,Observed(t) - Baseline(t),Available at t
+wave_dev_lag7,Exp 4: Wave-Aware,Baseline deviation observed 7 days prior,wave_dev.shift(6),Available at t
+wave_intensity_t,Exp 4: Wave-Aware,Standardized wave deviation (Z-score),wave_dev / rolling_std,Available at t
+rolling_wave_amplitude_7,Exp 4: Wave-Aware,Rolling 7-day average wave amplitude magnitude,mean(|wave_dev|),Available at t
+wave_duration_t,Exp 4: Wave-Aware,Consecutive days the municipal series is in current wave regime,Count of consecutive regime days,Available at t
+is_high_surge_t,Exp 4: Wave-Aware,Flag indicating if current day is in a high surge surge wave (Z > 1.0),Binary indicator,Available at t
+is_low_trough_t,Exp 4: Wave-Aware,Flag indicating if current day is in a low trough wave (Z < -1.0),Binary indicator,Available at t
+wave_momentum,Exp 4: Wave-Aware,Rate of acceleration/deceleration of the wave deviation,wave_dev(t) - wave_dev(t-1),Available at t

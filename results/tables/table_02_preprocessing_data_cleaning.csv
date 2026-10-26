@@ -1,0 +1,9 @@
+Pipeline_Stage,Record_Count,Unit,Status,Notes
+1. Raw Initial Collection Tickets,15991,Weighbridge Tickets,Input Raw Data,Across 4 Sri Lankan Municipal Councils
+2. Zero-Weight Weighbridge Calibration Tests,14,Tickets,Filtered Out,0.0 kg empty test weighings
+3. Cleaned Ticket-Level Dataset,15977,Valid Tickets,Saved (cleaned_waste_dataset.csv),"100% complete records, 0 nulls"
+4. Daily Municipal Waste Aggregation,7966,Daily Time-Series Rows,Saved (daily_waste_dataset.csv),"Aggregated by (Area, Date) sum of kg"
+5. Feature Engineered Dataset,7846,Feature Vectors (81 columns),Saved (engineered_features.csv),30-day warmup applied; 0 lookahead leakage
+6. Chronological Training Partition (70%),5490,Training Samples,Model Training,Earliest 70% historical window
+7. Chronological Validation Partition (15%),1175,Validation Samples,Hyperparameter Tuning,Intermediate chronological window
+8. Chronological Test Partition (15%),1181,Unseen Test Samples,Final Evaluation Benchmark,Latest unseen chronological period

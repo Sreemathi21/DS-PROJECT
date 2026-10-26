@@ -1,0 +1,4 @@
+Wave_Regime,Observations,Mean_Actual_kg,MAE_kg,RMSE_kg,R2_Score
+High Surge Wave,139,65295.04,13372.29,18137.95,0.8729
+Low Trough Wave,173,70653.76,17207.49,26637.15,0.773
+Normal Period,869,72171.98,15772.84,26444.61,0.7756
